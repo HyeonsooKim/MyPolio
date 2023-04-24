@@ -17,6 +17,7 @@ environ.Env.read_env(
 pymysql.install_as_MySQLdb()
 
 SECRET_KEY = env('SECRET_KEY')
+AUTH_USER_MODEL = 'users.User'
 
 DEBUG = True
 
@@ -55,6 +56,7 @@ CORS_ALLOW_HEADERS = (
 
 # Application definition
 LOCAL_APPS = [
+    'apps.users.apps.UsersConfig',
 ]
 
 DJANGO_APPS = [
